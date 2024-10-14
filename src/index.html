@@ -20,10 +20,61 @@
       synth.triggerAttackRelease("D4", "4n");
     }
   </script>
-<link rel="stylesheet" href="styles.ef46db3751d8e999.css"></head>
+<style>
+  body {
+    background-color: rgb(245, 245, 239);
+  }
+  
+  h1 {
+     font-family: 'Montserrat';
+     font-weight: 800;
+     line-height: 1em;
+     font-size: 30px;
+     color: #5f5f5f;
+}
+
+h2 {
+     font-weight: 600;
+     color: #5f5f5f;
+     font-size: 19px;
+     font-family: 'Franziska, Georgia, Cambria';
+} 
+
+h2 span.hashtag {
+     text-transform: uppercase;
+     letter-spacing: 4px;
+     color: #333;
+     font-weight: 400;
+}
+
+h2 strong {
+    color: #4B6082;
+    font-weight: 800;
+}
+
+blockquote {
+    font-style: italic;
+    padding-left: 3rem;
+    font-size: 16px;
+    line-height: 26.22px;
+    font-family: 'Franziska, Georgia, Cambria';
+}
+  </style>
+</head>
 <body>
+  <h1>1. Eine einfache Azure-Angular-Anwendung</h1>
+  <h2>Audiointegration (Tone.js)</h2>
+  <blockquote>Ein Tongenerator, welcher Noten in bestimmten Längen spielen kann.
+  Beispielhaft Töne für eine erfolgreiche und eine fehlerhafte Benutzereingabe ...
+  
   <button onclick="playNote()">Erfolgreiche Aktion!</button>
   <button onclick="playNoteErr()">Fehler!</button>
+</blockquote>
+  
+  <h2>Chartintegration (Chart.js)</h2>
+  <blockquote>Ein Beispielgraph mit vier Elementen:
+  Aktuelle Schwierigkeit des Trainings, vom Patienten gemachte Fehler, vom neuronalen Netz berechnete Prognose.
+  </blockquote>
   <div>
     <canvas id="Trainingshistorie Patient X"></canvas>
   </div>
@@ -73,15 +124,7 @@
       }
     });   
   </script>
-  <script src="/node_modules/howler/src/howler.core.js">
-      var sound = new Howl({
-        src: ['./ping.mp3'],
-        html5: true
-      });
-      sound.play();
-  </script>
   <script src="http://unpkg.com/tone">
-    //create a synth and connect it to the main output (your speakers)
     const synth = new Tone.Synth().toDestination();
     //play a middle 'C' for the duration of an 8th note
     synth.triggerAttackRelease("C4", "8n");
@@ -89,4 +132,12 @@
   <app-root></app-root>
 <script src="runtime.f6071096bffe76cd.js" type="module"></script><script src="polyfills.d74607a173d2d8b5.js" type="module"></script><script src="main.6a76a901766d8ee9.js" type="module"></script>
 
-</body></html>
+<h1>2. Vorgehensweise</h1>
+<blockquote>1. Analyse der Anforderungen und Erstellung von UML-Diagrammen:</blockquote>
+<img src="/Users/floriancarstens/Documents/ai-health-app/static-web-app/src/UML.jpg" alt="Girl in a jacket" style="width:800px;"/>
+<blockquote>2. Auswahl geeigneter KI-Modelle (RNN, LSTM, LLM etc.) zur Umsetzung der Anforderungen.</blockquote>
+<blockquote>3. Lokale Entwicklung nach agilem Vorgehensmodell (=Optimierung der Lernkurve).</blockquote>
+<blockquote>4. Stetige und enge Feedbackschleifen nach neuen Inkrements.</blockquote>
+<blockquote>5. Integration der Ergebnisse in den bestehenden SW-Stack mittels Dev-Ops.</blockquote>
+</body>
+</html>
